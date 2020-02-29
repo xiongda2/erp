@@ -45,6 +45,10 @@ public class TreeNode {
      */
     private List<TreeNode> children = new ArrayList<TreeNode>();
 
+    /**
+     * 树节点复选框是否选中
+     */
+    private String checkArr = "0";
 
 
     /**
@@ -70,5 +74,13 @@ public class TreeNode {
         this.pid = pid;
         this.title = title;
         this.spread = spread;
+    }
+
+    public TreeNode(Integer id, Integer pid, String title, Boolean spread,String checkArr) {
+        this.id = id;
+        this.pid = pid;
+        this.title = title;
+        this.spread = spread;
+        this.checkArr = checkArr;
     }
 }

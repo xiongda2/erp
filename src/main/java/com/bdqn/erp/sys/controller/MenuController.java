@@ -87,7 +87,8 @@ public class MenuController {
     @RequestMapping("/loadMenuTreeLeft")
     public DataGridViewResult loadMenuTreeLeft(PermissionVo permissionVo){
         QueryWrapper<Permission> queryWrapper = new QueryWrapper<Permission>();
-        queryWrapper.eq("type",SystemConstant.TYPE_MENU);//只查询菜单，不查权限
+        //只查询菜单，不查权限
+        queryWrapper.eq("type",SystemConstant.TYPE_MENU);
         //查询所有菜单
         List<Permission> permissionList = permissionService.list(queryWrapper);
         //创建节点集合

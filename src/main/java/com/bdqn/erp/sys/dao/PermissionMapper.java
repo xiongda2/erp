@@ -3,8 +3,10 @@ package com.bdqn.erp.sys.dao;
 import com.bdqn.erp.sys.entity.Permission;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Select;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * <p>
@@ -22,5 +24,14 @@ public interface PermissionMapper extends BaseMapper<Permission> {
      */
     @Delete("delete from sys_role_permission where pid =#{id}")
     void deleteRolePermissionByPid(Serializable id);
+
+    /**
+     * 根据角色id查询当前角色拥有的菜单及权限
+     * @param roleId
+     * @return
+     * @throws Exception
+     */
+    @Select("select pid from sys_role_permission where rid = #{id}")
+    List<Integer> findRolePermissionByRoleId(int roleId) throws Exception;
 
 }

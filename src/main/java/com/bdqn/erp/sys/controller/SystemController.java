@@ -101,4 +101,64 @@ public class SystemController {
     public String toMenuRight() {
         return "system/menu/right";
     }
+
+    /**
+     * 跳转到权限管理页面
+     * @return
+     */
+    @RequestMapping("/toPermissionManager")
+    public String toPermissionManager() {
+        return "system/permission/permissionManager";
+    }
+    /**
+     * 跳转到权限管理页面-left
+     * @return
+     */
+    @RequestMapping("/toPermissionLeft")
+    public String toPermissionLeft() {
+        return "system/permission/left";
+    }
+    /**
+     * 跳转到权限管理页面-right
+     * @return
+     */
+    @RequestMapping("/toPermissionRight")
+    public String toPermissionRight() {
+        return "system/permission/right";
+    }
+
+    /**
+     * 跳转到角色管理页面
+     * @return
+     */
+    @RequestMapping("/toRoleManager")
+    public String toRoleManager() {
+        return "system/role/roleManager";
+    }
+
+    /**
+     * 跳转到用户管理页面
+     * @return
+     */
+    @RequestMapping("/toUserManager")
+    public String toUserManager() {
+        return "system/user/userManager";
+    }
+    /**
+     * 跳转到用户管理页面-left
+     * @return
+     */
+    @RequestMapping("/toUserLeft")
+    public String toUserLeft() {
+        return "system/user/left";
+    }
+    /**
+     * 跳转到用户管理页面-right
+     * @return
+     */
+    @RequestMapping("/toUserRight")
+    public String toUserRight() {
+        return "system/user/right";
+    }
+
 }

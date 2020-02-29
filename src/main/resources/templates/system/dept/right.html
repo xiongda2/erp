@@ -319,15 +319,24 @@
                     })
                 }
             }, 'json');
-
         }
-
-
 
 
     });
 
 
+    /**
+     * 加载数据表格的方法
+     * @param id
+     */
+    function loadTableData(id) {
+        tableIns.reload({
+            where:{"id":id},
+            page:{
+                curr:1
+            }
+        });
+    }
 </script>
 </body>
 </html>

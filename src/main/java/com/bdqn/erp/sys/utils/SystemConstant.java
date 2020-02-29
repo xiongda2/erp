@@ -77,4 +77,72 @@ public interface SystemConstant {
     JSONResult UPDATE_ERROR = new JSONResult(false,"修改失败");
 
     String EXIST = "exits";
+
+    /**
+     * 权限分配成功
+     */
+    JSONResult DISTRIBUTE_SUCCESS = new JSONResult(true,"权限分配成功");
+
+    /**
+     * 权限分配失败
+     */
+    JSONResult DISTRIBUTE_ERROR = new JSONResult(false,"权限分配失败");
+
+    /**
+     * 验证信息
+     */
+    String MESSAGE = "message";
+
+    /**
+     * 重置成功
+     */
+    JSONResult RESET_SUCCESS = new JSONResult(true,"重置成功");
+
+    /**
+     * 重置失败
+     */
+    JSONResult RESET_ERROR = new JSONResult(false,"重置失败");
+
+
+    /**
+     * 普通用户
+     */
+    Integer NORMAL_USER = 1;
+
+
+    /**
+     * 用户默认的初始化密码
+     */
+    String DEFAULT_PWD = "123456";
+
+    /**
+     * 加密次数
+     */
+    Integer HASHITERATIONS = 2;
+
+
+    /**
+     * 登录操作
+     */
+    String LOGIN_ACTION="登录操作";
+    /**
+     * 注销操作
+     */
+    String LOGOUT_ACTION="注销操作";
+    /**
+     * 查询操作
+     */
+    String SEARCH_ACTION="查询操作";
+    /**
+     * 更新操作
+     */
+    String UPDATE_ACTION="更新操作";
+    /**
+     * 添加操作
+     */
+    String ADD_ACTION="添加操作";
+    /**
+     * 删除操作
+     */
+    String DELETE_ACTION="删除操作";
 }
