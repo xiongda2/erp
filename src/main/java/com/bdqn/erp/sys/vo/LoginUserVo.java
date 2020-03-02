@@ -7,13 +7,25 @@ import lombok.NoArgsConstructor;
 
 import java.util.Set;
 
+/**
+ * @author admin
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class LoginUserVo {
-    private User user;//用户信息
-    private Set<String> roles;//角色列表
-    private Set<String> permissions;//权限列表
+    /**
+     * 用户信息
+     */
+    private User user;
+    /**
+     * 角色列表
+     */
+    private Set<String> roles;
+    /**
+     * 权限列表
+     */
+    private Set<String> permissions;
 
 
 }

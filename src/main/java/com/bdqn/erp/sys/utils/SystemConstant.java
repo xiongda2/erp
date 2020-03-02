@@ -87,6 +87,10 @@ public interface SystemConstant {
      * 权限分配失败
      */
     JSONResult DISTRIBUTE_ERROR = new JSONResult(false,"权限分配失败");
+    /**
+     * 没有权限
+     */
+    JSONResult AUTHORITY_ERROR = new JSONResult(false,"没有权限分配");
 
     /**
      * 验证信息

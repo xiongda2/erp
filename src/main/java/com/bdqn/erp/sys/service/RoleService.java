@@ -3,6 +3,8 @@ package com.bdqn.erp.sys.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.bdqn.erp.sys.entity.Role;
 
+import java.util.Set;
+
 /**
  * <p>
  * 服务类
@@ -21,4 +23,14 @@ public interface RoleService extends IService<Role> {
      * @throws Exception
      */
     boolean saveRolePermission(int rid, String ids) throws Exception;
+
+
+    /**
+     * 根据角色id获取该角色关联的菜单和权限id
+     * @param id
+     * @return
+     * @throws Exception
+     */
+    Set<Integer> findRolePermissionIdByRoleId(Integer id) throws Exception;
+
 }

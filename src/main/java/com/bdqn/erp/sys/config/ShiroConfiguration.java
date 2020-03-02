@@ -83,17 +83,21 @@ public class ShiroConfiguration {
         //设置过滤器链
         Map<String,String> filterChainDefinitionsMap = new LinkedHashMap<String,String>();
         //放行路径（匿名访问）
-        filterChainDefinitionsMap.put("/resources/**","anon");//静态资源
-
-        filterChainDefinitionsMap.put("/sys/user/login","anon");//登录请求
-        filterChainDefinitionsMap.put("/sys/login","anon");//去到登录页面
-        filterChainDefinitionsMap.put("/login","anon");//去到登录页面
-        filterChainDefinitionsMap.put("/","anon");//去到登录页面
-
-        filterChainDefinitionsMap.put("/favicon.ico","anon");//图标
+        //静态资源
+        filterChainDefinitionsMap.put("/resources/**","anon");
+        //登录请求
+        filterChainDefinitionsMap.put("/sys/user/login","anon");
+        //去到登录页面
+        filterChainDefinitionsMap.put("/sys/login","anon");
+        //去到登录页面
+        filterChainDefinitionsMap.put("/login","anon");
+        //去到登录页面
+        filterChainDefinitionsMap.put("/","anon");
+        //图标
+        filterChainDefinitionsMap.put("/favicon.ico","anon");
         //退出
         filterChainDefinitionsMap.put("/logout","logout");
-        //拦截请求
+        //拦截的请求  其他全部需要认证
         filterChainDefinitionsMap.put("/**","authc");
         //将过滤器链设置到shiroFilterFactoryBean对象中
         factoryBean.setFilterChainDefinitionMap(filterChainDefinitionsMap);

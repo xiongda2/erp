@@ -13,6 +13,8 @@ import com.bdqn.erp.sys.utils.SystemConstant;
 import com.bdqn.erp.sys.utils.TreeNode;
 import com.bdqn.erp.sys.vo.DeptVo;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -106,6 +108,7 @@ public class DeptController {
      * @param dept
      * @return
      */
+    @RequiresPermissions("dept:update")
     @PostMapping("/updateDept")
     public JSONResult updateDept(Dept dept){
         try {

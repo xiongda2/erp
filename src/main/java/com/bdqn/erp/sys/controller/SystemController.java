@@ -161,4 +161,15 @@ public class SystemController {
         return "system/user/right";
     }
 
+
+
+    /**
+     * 跳转到个人信息
+     * @return
+     */
+    @RequestMapping("/personalInformation")
+    public String toPersonalInformation() {
+        return "system/user/personalInformation";
+    }
+
 }

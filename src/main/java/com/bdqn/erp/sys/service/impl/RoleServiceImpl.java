@@ -53,6 +53,11 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements Ro
         return false;
     }
 
+    @Override
+    public Set<Integer> findRolePermissionIdByRoleId(Integer id) throws Exception{
+        return roleMapper.findRolePermissionByRoleId(id);
+    }
+
 
 
 }
